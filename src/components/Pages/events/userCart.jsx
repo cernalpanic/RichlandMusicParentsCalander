@@ -31,18 +31,20 @@ export default function UserCartComponent() {
       },
     },
   });
-  useEffect(() => {
-    // IF OUR ORDER[0] IS NOT UNDEFINED WE WILL SET EACH STATE TO THE CORRECT OBJECT KEY AND WE WILL DO THIS ANYTIME OUR ORDER STORE CHANGES
-    // IF OUR ORDER[0] IS UNDEFINED WE WILL NOT SET ANY STATE WHICH MEANS WE WONT GET AN ERROR
-    orders[0] !== undefined && setFirstName(orders[0].first_name);
-    orders[0] !== undefined && setLastName(orders[0].last_name);
-    orders[0] !== undefined && setAddress(orders[0].address);
-    orders[0] !== undefined && setCity(orders[0].city);
-    orders[0] !== undefined && setZip(orders[0].zip);
-    orders[0] !== undefined && setState(orders[0].state);
-    orders[0] !== undefined && setEmail(orders[0].email);
-    orders[0] !== undefined && setPhone(orders[0].phone);
-  }, [orders]);
+
+  //TODO 'orders' not instanitated
+  //useEffect(() => {
+  // IF OUR ORDER[0] IS NOT UNDEFINED WE WILL SET EACH STATE TO THE CORRECT OBJECT KEY AND WE WILL DO THIS ANYTIME OUR ORDER STORE CHANGES
+  // IF OUR ORDER[0] IS UNDEFINED WE WILL NOT SET ANY STATE WHICH MEANS WE WONT GET AN ERROR
+  // orders[0] !== undefined && setFirstName(orders[0].first_name);
+  //  orders[0] !== undefined && setLastName(orders[0].last_name);
+  //  orders[0] !== undefined && setAddress(orders[0].address);
+  //  orders[0] !== undefined && setCity(orders[0].city);
+  //  orders[0] !== undefined && setZip(orders[0].zip);
+  //  orders[0] !== undefined && setState(orders[0].state);
+  //  orders[0] !== undefined && setEmail(orders[0].email);
+  //  orders[0] !== undefined && setPhone(orders[0].phone);
+ // }, [orders]);
 
   // UseEffect that dispatches actions to get user events, products, calendar, orders, and order items. Order items contains two items
   // first one is calendar and second one is extra events, it has the quantity, and price.
@@ -54,9 +56,11 @@ export default function UserCartComponent() {
     dispatch({ type: "FETCH_ORDER_ITEMS" });
   }, [dispatch]);
 
-  useEffect(() => {
-    orders[0] !== undefined && setOrderId(orders[0].id);
-  }, [orders]);
+  //TODO 'orders' not instanitated
+  //useEffect(() => {
+  //  orders[0] !== undefined && setOrderId(orders[0].id);
+  //}, [orders]);
+  
   const paymentType = "0";
   const isPayed = false;
   const isDelivered = false;
